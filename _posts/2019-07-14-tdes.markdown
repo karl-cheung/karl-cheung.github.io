@@ -1,0 +1,7 @@
+---
+layout: post
+title: "DES 加密算法与三重数据加密算法（Triple DES）的简易封装"
+date: 2019-07-14
+categories: jekyll update
+link: https://github.com/vincheung/tdes
+---

@@ -1,0 +1,20 @@
+{
+  "name": "vincheung.github.io",
+  "version": "1.0.0",
+  "description": "Zhang Yu - Blog",
+  "scripts": {
+    "serve": "jekyll serve"
+  },
+  "author": "Zhang Yu <zhangyu.vin@gmail.com>",
+  "license": "Creative Commons BY-NC-ND 4.0（自由转载-保持署名-非商用-禁止演绎）协议",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vincheung/vincheung.github.io.git"
+  },
+  "keywords": [
+    "blog",
+    "jekyll",
+    "minima"
+  ],
+  "homepage": "https://github.com/vincheung/vincheung.github.io#readme"
+}

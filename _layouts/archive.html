@@ -1,0 +1,24 @@
+---
+layout: default
+---
+{% if site.posts.size > 0 %}
+<ul class="post-list">
+  {% for post in site.posts %}
+  <li>
+    {% assign date_format = site.minima.date_format | default: "%Y-%m-%d" %}
+    <span class="post-meta">{{ post.date | date: date_format }}</span>
+    {% if post.lunar-calendar %}
+      <span class="post-meta">&ensp;{{ post.lunar-calendar }}</span>
+    {% endif %}
+    <div class="post-link-wrap">
+      <a href="{{ post.url | relative_url }}">
+        {{ post.title | escape }}
+      </a>
+    </div>
+    {% if site.show_excerpts %}
+    {{ post.excerpt }}
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}

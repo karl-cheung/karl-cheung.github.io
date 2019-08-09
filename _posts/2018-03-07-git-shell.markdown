@@ -1,0 +1,122 @@
+---
+layout: post
+title: "git 命令行"
+date: 2018-03-07
+categories: jekyll update
+---
+
+## 配置
+
+```shell
+git config --global user.name 'name'
+
+git config --global user.email 'mailbox@*’
+```
+
+## 提交
+
+```shell
+
+# 初次提交
+
+git init
+
+git add .
+
+git commit -m 'commit message'
+
+git remote add origin *@*.git
+
+git push -u origin master
+
+# 远程分支合并提交
+
+git init
+
+git add .
+
+git commit -m 'commit message'
+
+git remote add origin *@*.git
+
+git pull origin master --allow-unrelated-histories
+
+git push -u origin master
+
+# 当前分支提交
+
+git init
+
+git add .
+
+git commit -m 'commit message'
+
+git push origin master
+
+# 保留当前代码删除所有提交历史
+
+git checkout --orphan latest_branch
+
+git add -A
+
+git commit -am 'commit message'
+
+git branch -D master
+
+git branch -m master
+
+git push -f origin master
+
+# 强制提交
+
+git push origin <Branch> --force
+```
+
+## 推送 pr
+
+```shell
+git remote add upstream https://*@*.git
+
+git remote -v
+
+git fetch upstream
+
+git merge upstream/master
+
+git push origin master
+```
+
+## 其他
+
+```shell
+
+# 取消工作区更改
+git checkout file
+
+# 取消暂存区更改（add 操作）
+git reset HEAD file
+
+# 查看上一次未 push 的 commit
+git log master ^origin/master
+
+# 撤销上一次未 push 的 commit
+git reset HEAD~1
+
+# 回退到某一次未 push 的 commit
+git reset commit_id
+
+# 修正最后一个 commit 消息
+git commit --amend -m 'commit message'
+
+# 拉取远程分支并新建本地分支
+git fetch <Branch>:<Branch>
+
+# 拉取远程分支并在本地新建后转变到本地分支
+git checkout -b <Branch> origin/<Branch>
+
+# 删除远程分支文件
+git rm -rf file
+
+# 删除远程分支文件但本地继续保存
+git rm --cached file
+```

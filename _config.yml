@@ -1,0 +1,47 @@
+title: Zhang Yu
+author: vincheung
+email: zhangyu.vin@gmail.com
+description: > # this means to ignore newlines until "show_excerpts:"
+  A practice trip for a front-end r&d engineer.
+
+show_excerpts: false # set to true to show excerpts on the homepage
+
+# Minima date format
+# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%Y-%m-%d"
+
+  # generate social links in footer
+  social_links:
+    github: vincheung
+    instagram: vin__cheung
+    twitter: vin__cheung
+    facebook: zhangyu.vin
+    linkedin: vin-cheung
+    youtube_channel: UCFpTR0LvTggoejtFEKWKIWA
+    rss: rss
+
+    # Mastodon instances
+    # mastodon:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+header_pages:
+- index.md
+- archive.md
+- material.md
+- tool.md
+- plan.md
+- photo.md
+- about.md
+
+# Build settings
+theme: minima
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag
