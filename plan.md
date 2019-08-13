@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: plan
 title: PLAN
 permalink: /plan
 ---

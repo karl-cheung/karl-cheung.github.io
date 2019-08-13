@@ -35,8 +35,8 @@ header_pages:
 - archive.md
 - material.md
 - tool.md
-- plan.md
 - photo.md
+- plan.md
 - about.md
 
 # Build settings
@@ -45,3 +45,6 @@ theme: minima
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
+
+collections:
+- _data

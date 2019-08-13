@@ -49,7 +49,7 @@
     }
   }
 
-  label[for="nav-trigger"] {
+  label[for='nav-trigger'] {
     width: 36px;
     height: 36px;
     z-index: 2;
@@ -72,7 +72,7 @@
     line-height: $base-line-height;
     @include relative-font-size(0.875);
     padding: 5px 10px;
-    font-family: "EffectraMedium";
+    font-family: 'EffectraMedium';
     user-select: none;
 
     // Gaps between nav items, but not on the last one
@@ -96,7 +96,7 @@
     border: none;
     background-color: inherit;
 
-    label[for="nav-trigger"] {
+    label[for='nav-trigger'] {
       display: none;
     }
 
@@ -390,12 +390,12 @@
       font-size: 40px;
       color: #2f1728;
       font-weight: bold;
-      font-family: "Domaine Disp Black";
+      font-family: 'Domaine Disp Black';
     }
     .main {
       height: 80px;
       padding: 15px 0 35px;
-      font-family: "Johnston ITC Pro Medium";
+      font-family: 'Johnston ITC Pro Medium';
     }
     .btn-wrap {
       font-size: 0;
@@ -428,7 +428,7 @@
         }
         .btn {
           display: inline-block;
-          font-family: "MuseoSansRounded 900";
+          font-family: 'MuseoSansRounded 900';
         }
       }
       a:nth-child(1) {
@@ -445,4 +445,49 @@
 
 .about {
   padding: 70px 0 0;
+}
+
+.plan {
+  .context {
+    li {
+      display: flex;
+      align-items: center;
+      padding: 25px 0;
+      margin: 0 0 20px;
+      border-radius: 4px;
+      background: white;
+      position: relative;
+      @include relative-font-size(0.875);
+      .pictrue {
+        flex: 0 0 100px;
+        padding: 0 30px;
+      }
+      .name-type {
+        width: 200px;
+        .name {
+          font-weight: bold;
+        }
+      }
+      .state {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        border-radius: 100%;
+        color: white;
+        background: #ff6b71;
+        @include relative-font-size(0.75);
+        position: absolute;
+        right: 50px;
+      }
+      .date {
+        width: 100px;
+        text-align: center;
+        position: absolute;
+        right: 35px;
+        bottom: 25px;
+        color: #dc3a30;
+      }
+    }
+  }
 }
