@@ -79,7 +79,7 @@
   state: 1
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2361872922.jpg
 
-- name: 狐妖小红娘 南国篇
+- name: 狐妖小红娘 竹叶篇
   date:
   type: 1
   state: 1
@@ -98,7 +98,7 @@
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1856010090.jpg
 
 - name: 紫罗兰永恒花园
-  date:
+  date: 2019-08-23
   type: 1
   state: 1
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2508746540.jpg
