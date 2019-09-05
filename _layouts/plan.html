@@ -30,10 +30,10 @@ layout: default
         </span>
       </div>
       <div class="state">
-        {% if video.state == 1 %}
-        进行中
-        {% elsif video.state == 2 %}
+        {% if video.date %}
         已追完
+        {% elsif video.state == 1 %}
+        进行中
         {% else %}
         计划
         {% endif %}

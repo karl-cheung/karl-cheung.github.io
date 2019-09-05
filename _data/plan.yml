@@ -1,70 +1,59 @@
 # type 0.动漫电影 1.动漫 2.电影 3.电视剧
-# state 0.计划 1.进行中 2.已追完
+# 1. date 已追完 2. state true 进行中 3. state false 计划
 
 - name: 武庚纪 2 天启
   date: 2019-07-00
   type: 1
-  state: 2
   link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2511521028.jpg
 
 - name: 雄兵连之诸天降临
   date: 2019-07-00
   type: 1
-  state: 2
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2545490885.jpg
 
 - name: 爱，死亡和机器人
   date: 2019-07-00
   type: 1
-  state: 2
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2548248276.jpg
 
 - name: 死神来了
   date: 2019-07-00
   type: 2
-  state: 2
   link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p1332799477.jpg
 
 - name: 活着
   date: 2019-07-00
   type: 2
-  state: 2
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2513253791.jpg
 
 - name: 攻壳机动队
   date: 2019-07-00
   type: 2
-  state: 2
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2453176400.jpg
 
 - name: 头号玩家
   date: 2019-07-00
   type: 2
-  state: 2
   link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2516578307.jpg
 
 - name: 千与千寻
   date: 2019-07-15
   type: 0
-  state: 2
   link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2557573348.jpg
 
 - name: 扫毒 2 天地对决
   date: 2019-07-21
   type: 2
-  state: 2
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2561172733.jpg
 
 - name: 哪吒之魔童降世
   date: 2019-08-04
   type: 0
-  state: 2
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2563780504.jpg
 
 - name: 盗梦空间
   date: 2019-08-10
   type: 2
-  state: 2
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p513344864.jpg
 
 - name: 火影忍者 第 276 集
@@ -100,53 +89,44 @@
 - name: 紫罗兰永恒花园
   date: 2019-08-23
   type: 1
-  state: 1
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2508746540.jpg
 
 - name: 魔道祖师 2
-  date:
+  date: 2019-08-31
   type: 1
-  state: 1
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2523153760.jpg
 
 - name: 少年歌行
   date:
   type: 1
-  state: 0
   link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2543731197.jpg
 
 - name: 东京喰种 3
   date:
   type: 1
-  state: 0
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2533692911.jpg
 
 - name: 仙剑奇侠传
   date:
   type: 3
-  state: 0
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2561931895.jpg
 
 - name: 胜利即正义
   date:
   type: 3
-  state: 0
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1901775591.jpg
 
 - name: 我想吃掉你的胰脏
   date:
   type: 0
-  state: 0
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2545571306.jpg
 
 - name: 蜘蛛侠 英雄远征
   date:
   type: 2
-  state: 0
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2558293106.jpg
 
 - name: 使徒行者 2 谍影行动
   date: 2019-08-17
   type: 2
-  state: 2
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2563751491.jpg

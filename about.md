@@ -10,7 +10,7 @@ permalink: /about
 
 有关工作招募方面的事情，请通过 [电子邮件](mailto:{{ site.email }}) 联系我。
 
-我没有为博客开通评论系统的打算，所以如果你有任何问题，请前往 [GitHub-Issues]。
+我未有为博客开通评论系统的打算，如果你有任何问题，请前往 [GitHub-Issues]。
 
 <br/>
 
@@ -22,6 +22,6 @@ Please contact me by [email](mailto:{{ site.email }}) regarding job recruitment.
 
 I have no plans to launch a comment system for my blog,
 
-so if you have any questions, please go to [GitHub-Issues].
+If you have any questions, go to [GitHub-Issues].
 
-[GitHub-Issues]: https://github.com/vincheung/vincheung.github.io/issues
+[github-issues]: https://github.com/vincheung/vincheung.github.io/issues
