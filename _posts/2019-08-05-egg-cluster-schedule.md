@@ -31,12 +31,22 @@ module.exports = {
 ```js
 'use strict'
 
+const sleep = s => new Promise(resolve => setTimeout(resolve, s))
+
 module.exports = agent => {
   class ClusterStrategy extends agent.ScheduleStrategy {
     start() {
-      this.interval = setInterval(() => {
-        this.sendOne()
-      }, this.schedule.interval)
+      try {
+        ;(async () => {
+          while (true) {
+            const { interval } = this.schedule
+            await sleep(interval)
+            this.sendOne()
+          }
+        })()
+      } catch (error) {
+        ctx.logger.error(error)
+      }
     }
   }
 
