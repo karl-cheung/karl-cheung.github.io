@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "git 命令行"
+title: 'git 命令行'
 date: 2018-03-07
 categories: jekyll update
 ---
@@ -8,6 +8,7 @@ categories: jekyll update
 ## 配置
 
 ```shell
+
 git config --global user.name 'name'
 
 git config --global user.email 'mailbox@*’
@@ -72,7 +73,26 @@ git push -f origin master
 git push origin <Branch> --force
 ```
 
-## 推送 pr
+## remote
+
+```shell
+# 查看 remote
+git remote -v
+
+# 添加 remote
+git remote add <origin> *.git
+
+# 删除 remote
+git remote remove <origin>
+
+# 指定 remote 提交
+git push <origin>
+
+# 查看其他 remote 提交日志
+git ls-remote
+```
+
+### 推送 pr
 
 ```shell
 git remote add upstream https://*@*.git
