@@ -4,7 +4,8 @@ layout: default
 
 <div class="plan">
   <ul class="context">
-    {% for video in site.data.plan reversed %}
+    {% assign videos = site.data.plan | sort: 'state' %}
+    {% for video in videos reversed %}
     <li>
       <div class="pictrue">
         {% if video.name %}
