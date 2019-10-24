@@ -1,7 +1,6 @@
-# type 0.动漫电影 1.动漫 2.电影 3.电视剧
-# 1. date 已追完
-# 2. state 1 进行中
-# 3. state 0 计划
+# type 0. 动漫电影 1. 动漫 2. 电影 3. 电视剧
+# state 0. 计划 1. 进行中 2. 已追完
+# date 已追完
 
 - name: 千与千寻
   date: 2019-07-15
@@ -23,12 +22,6 @@
   type: 2
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p513344864.jpg
 
-- name: 火影忍者 第 276 集
-  date:
-  type: 1
-  state: 1
-  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2361266484.jpg
-
 - name: 夏目友人帐
   date:
   type: 1
@@ -40,6 +33,12 @@
   type: 1
   state: 1
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2253414171.jpg
+
+- name: 火影忍者 第 276 集
+  date:
+  type: 1
+  state: 1
+  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2361266484.jpg
 
 - name: 天行九歌
   date:
@@ -113,3 +112,62 @@
   type: 1
   state: 1
   link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2554078838.jpg
+
+- name: 罗小黑战记
+  date: 2019-09-27
+  type: 0
+  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2568288336.jpg
+
+- name: 沉默的证人
+  date:
+  type: 2
+  state: 0
+  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2564369311.jpg
+
+- name: 银河补习班
+  date:
+  type: 2
+  state: 0
+  link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2561542089.jpg
+
+- name: 速度与激情：特别行动
+  date:
+  type: 2
+  state: 0
+  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2561542272.jpg
+
+- name: 那些年，我们一起追的女孩 あの頃、君を追いかけた
+  date:
+  type: 2
+  state: 0
+  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2523121920.jpg
+
+- name: 明日战记
+  date:
+  type: 2
+  state: 0
+  link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2445601168.jpg
+
+- name: 寻秦记
+  date:
+  type: 2
+  state: 0
+  link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2445505609.jpg
+
+- name: 全职高手之巅峰荣耀‎
+  date:
+  type: 0
+  state: 0
+  link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2564508538.jpg
+
+- name: 攀登者
+  date: 2019-09-30
+  type: 2
+  state: 2
+  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2568577681.jpg
+
+- name: 我和我的祖国
+  date: 2019-10-12
+  type: 2
+  state: 2
+  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2567998580.jpg

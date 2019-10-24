@@ -35,6 +35,8 @@ layout: default
         已追完
         {% elsif video.state == 1 %}
         进行中
+        {% elsif video.state == 2 %}
+        已追完
         {% else %}
         计划
         {% endif %}
