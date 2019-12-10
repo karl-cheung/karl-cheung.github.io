@@ -68,9 +68,13 @@
   link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2543731197.jpg
 
 - name: 东京喰种 3
-  date:
+  date: 2019-12-06
   type: 1
-  state: 0
+  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2533692911.jpg
+
+- name: 东京喰种 4
+  date: 2019-12-10
+  type: 1
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2533692911.jpg
 
 - name: 仙剑奇侠传
@@ -119,9 +123,8 @@
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2568288336.jpg
 
 - name: 沉默的证人
-  date:
+  date: 2019-11-10
   type: 2
-  state: 0
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2564369311.jpg
 
 - name: 银河补习班
@@ -176,16 +179,9 @@
   state: 0
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2570879785.jpg
 
-- name: 双子杀手
-  date:
-  type: 2
-  state: 0
-  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2570906505.jpg
-
 - name: 催眠·裁决
-  date:
+  date: 2019-10-15
   type: 2
-  state: 0
   link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2569044398.jpg
 
 - name: 天气之子
@@ -195,9 +191,8 @@
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2570055890.jpg
 
 - name: 海上钢琴师
-  date:
+  date: 2019-12-01
   type: 2
-  state: 0
   link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2572390547.jpg
 
 - name: 龙门卸甲
@@ -211,13 +206,23 @@
   link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2572160709.jpg
 
 - name: 普罗米修斯
-  date:
+  date: 2019-11-01
   type: 2
-  state: 0
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1548920463.jpg
 
 - name: 异形·契约
+  date: 2019-11-03
+  type: 2
+  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2459944375.jpg
+
+- name: 南方车站的聚会
   date:
   type: 2
   state: 0
-  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2459944375.jpg
+  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2574278284.jpg
+
+- name: 这个勇者明明超强却过分慎重
+  date:
+  type: 1
+  state: 1
+  link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2570150836.jpg

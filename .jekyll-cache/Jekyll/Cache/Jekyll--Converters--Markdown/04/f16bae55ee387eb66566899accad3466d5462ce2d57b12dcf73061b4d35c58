@@ -1,0 +1,131 @@
+I"�<h2 id="配置">配置</h2>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+git config <span class="nt">--global</span> user.name <span class="s1">'name'</span>
+
+git config <span class="nt">--global</span> user.email <span class="s1">'mailbox@*’
+</span></code></pre></div></div>
+
+<h2 id="提交">提交</h2>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c"># 初次提交</span>
+
+git init
+
+git add <span class="nb">.</span>
+
+git commit <span class="nt">-m</span> <span class="s1">'commit message'</span>
+
+git remote add origin <span class="k">*</span>@<span class="k">*</span>.git
+
+git push <span class="nt">-u</span> origin master
+
+<span class="c"># 远程分支合并提交</span>
+
+git init
+
+git add <span class="nb">.</span>
+
+git commit <span class="nt">-m</span> <span class="s1">'commit message'</span>
+
+git remote add origin <span class="k">*</span>@<span class="k">*</span>.git
+
+git pull origin master <span class="nt">--allow-unrelated-histories</span>
+
+git push <span class="nt">-u</span> origin master
+
+<span class="c"># 当前分支提交</span>
+
+git init
+
+git add <span class="nb">.</span>
+
+git commit <span class="nt">-m</span> <span class="s1">'commit message'</span>
+
+git push origin master
+
+<span class="c"># 保留当前代码删除所有提交历史</span>
+
+git checkout <span class="nt">--orphan</span> latest_branch
+
+git add <span class="nt">-A</span>
+
+git commit <span class="nt">-am</span> <span class="s1">'commit message'</span>
+
+git branch <span class="nt">-D</span> master
+
+git branch <span class="nt">-m</span> master
+
+git push <span class="nt">-f</span> origin master
+
+<span class="c"># 强制提交</span>
+
+git push origin &lt;Branch&gt; <span class="nt">--force</span>
+</code></pre></div></div>
+
+<h2 id="remote">remote</h2>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 查看 remote</span>
+git remote <span class="nt">-v</span>
+
+<span class="c"># 添加 remote</span>
+git remote add &lt;origin&gt; <span class="k">*</span>.git
+
+<span class="c"># 删除 remote</span>
+git remote remove &lt;origin&gt;
+
+<span class="c"># 指定 remote 提交</span>
+git push &lt;origin&gt;
+
+<span class="c"># 查看其他 remote 提交日志</span>
+git ls-remote
+</code></pre></div></div>
+
+<h3 id="推送-pr">推送 pr</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add upstream https://<span class="k">*</span>@<span class="k">*</span>.git
+
+git remote <span class="nt">-v</span>
+
+git fetch upstream
+
+git merge upstream/master
+
+git push origin master
+</code></pre></div></div>
+
+<h2 id="其他">其他</h2>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c"># 取消工作区更改</span>
+git checkout file
+
+<span class="c"># 取消暂存区更改（add 操作）</span>
+git reset HEAD file
+
+<span class="c"># 查看上一次未 push 的 commit</span>
+git log master ^origin/master
+
+<span class="c"># 撤销上一次未 push 的 commit</span>
+git reset HEAD~1
+
+<span class="c"># 回退到某一次未 push 的 commit</span>
+git reset commit_id
+
+<span class="c"># 修正最后一个 commit 消息</span>
+git commit <span class="nt">--amend</span> <span class="nt">-m</span> <span class="s1">'commit message'</span>
+
+<span class="c"># 拉取远程分支并新建本地分支</span>
+git fetch &lt;Branch&gt;:&lt;Branch&gt;
+
+<span class="c"># 拉取远程分支并在本地新建后转变到本地分支</span>
+git checkout <span class="nt">-b</span> &lt;Branch&gt; origin/&lt;Branch&gt;
+
+<span class="c"># 删除远程分支文件</span>
+git <span class="nb">rm</span> <span class="nt">-rf</span> file
+
+<span class="c"># 删除远程分支文件但本地继续保存</span>
+git <span class="nb">rm</span> <span class="nt">--cached</span> file
+</code></pre></div></div>
+:ET

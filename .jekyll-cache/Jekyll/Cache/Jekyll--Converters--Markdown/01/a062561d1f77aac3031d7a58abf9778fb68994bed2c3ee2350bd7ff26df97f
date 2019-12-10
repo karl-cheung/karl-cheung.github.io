@@ -1,0 +1,82 @@
+I"R<h2 id="nginx">nginx</h2>
+
+<h3 id="根目录">根目录</h3>
+
+<blockquote>
+  <p>部署在根目录的项目</p>
+</blockquote>
+
+<div class="language-nginx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">location</span> <span class="n">/</span> <span class="p">{</span>
+  <span class="kn">try_files</span> <span class="nv">$uri</span> <span class="nv">$uri</span><span class="n">/</span> <span class="n">/index.html</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="子目录">子目录</h3>
+
+<blockquote>
+  <p>未部署在根目录的项目</p>
+</blockquote>
+
+<div class="language-nginx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="s">(!-e</span> <span class="nv">$request_filename</span><span class="s">)</span> <span class="p">{</span>
+  <span class="kn">rewrite</span> <span class="s">^/(.*)</span> <span class="n">/index.html</span> <span class="s">last</span><span class="p">;</span>
+  <span class="kn">break</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>或</p>
+
+<div class="language-nginx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">location</span> <span class="n">/</span> <span class="p">{</span>
+  <span class="kn">try_files</span> <span class="nv">$uri</span> <span class="nv">$uri</span><span class="n">/</span> <span class="s">@router</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">location</span> <span class="s">@router</span> <span class="p">{</span>
+  <span class="kn">rewrite</span> <span class="s">^.*</span>$ <span class="n">/index.html</span> <span class="s">last</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="其他后端配置例子">其他后端配置例子</h2>
+
+<p><a href="https://router.vuejs.org/zh/guide/essentials/history-mode.html">Vue Router</a></p>
+
+<h2 id="client">client</h2>
+
+<h3 id="vue">Vue</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">VueRouter</span><span class="p">({</span>
+  <span class="na">mode</span><span class="p">:</span> <span class="dl">'</span><span class="s1">history</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>如果应用服务在 <code class="highlighter-rouge">/app/</code> 下（非根目录）</p>
+</blockquote>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">VueRouter</span><span class="p">({</span>
+  <span class="na">base</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/app/</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">mode</span><span class="p">:</span> <span class="dl">'</span><span class="s1">history</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<h3 id="react">React</h3>
+
+<p>React Router 默认开启 browserHistory</p>
+
+<blockquote>
+  <p>如果应用服务在 <code class="highlighter-rouge">/app/</code> 下（非根目录）</p>
+</blockquote>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">BrowserRouter</span> <span class="nx">basename</span><span class="o">=</span><span class="dl">'</span><span class="s1">/app</span><span class="dl">'</span><span class="o">&gt;&lt;</span><span class="sr">/BrowserRouter</span><span class="err">&gt;
+</span></code></pre></div></div>
+
+<h3 id="参阅">参阅</h3>
+
+<ul>
+  <li>
+    <p><a href="https://router.vuejs.org/zh/guide/essentials/history-mode.html">Vue Router</a></p>
+  </li>
+  <li>
+    <p><a href="https://reacttraining.com/react-router/web/guides/server-rendering">React Router</a></p>
+  </li>
+</ul>
+
+:ET

@@ -1,0 +1,43 @@
+I"�<h2 id="使用">使用</h2>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span>
+<span class="k">import</span> <span class="nx">Hammer</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">hammerjs</span><span class="dl">'</span>
+
+<span class="kd">class</span> <span class="nx">HammerReact</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">state</span> <span class="o">=</span> <span class="p">{</span> <span class="na">container</span><span class="p">:</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createRef</span><span class="p">()</span> <span class="p">}</span>
+
+  <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="p">{</span> <span class="na">container</span><span class="p">:</span> <span class="p">{</span> <span class="nx">current</span> <span class="p">}</span> <span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">listener</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Hammer</span><span class="p">(</span><span class="nx">current</span><span class="p">)</span>
+    <span class="c1">// 给监听的元素对象添加长按(press)事件</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">listener</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">press</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="c1">// Do some thing...</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+
+  <span class="nx">componentWillUnmount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">listener</span><span class="p">.</span><span class="nx">destroy</span><span class="p">()</span> <span class="c1">// 销毁</span>
+  <span class="p">}</span>
+
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">container</span><span class="p">}</span><span class="o">&gt;</span><span class="err">我是</span> <span class="nx">div</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">HammerReact</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h2 id="附注">附注</h2>
+
+<blockquote>
+  <p>在添加的手势元素是动态渲染的情况下，通过事件委托的方式在父级元素处理。</p>
+</blockquote>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">this</span><span class="p">.</span><span class="nx">listener</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">press</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="na">target</span><span class="p">:</span> <span class="p">{</span> <span class="nx">nodeName</span> <span class="p">}</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">e</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">nodeName</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">DIV</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Do some thing...</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div></div>
+:ET

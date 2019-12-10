@@ -1,0 +1,72 @@
+I"5,<h2 id="二维码识别链接">二维码识别链接</h2>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">accept=</span><span class="s">"image/*"</span> <span class="na">onChange=</span><span class="s">"{handleFileChange}"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// image2array.js</span>
+<span class="c1">// 来自孩子王-许祥成</span>
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">image</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Image</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span>
+  <span class="nx">image</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="p">{</span> <span class="na">naturalWidth</span><span class="p">:</span> <span class="nx">width</span><span class="p">,</span> <span class="na">naturalHeight</span><span class="p">:</span> <span class="nx">height</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">image</span>
+      <span class="kd">const</span> <span class="nx">ratio</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="mi">500</span> <span class="o">/</span> <span class="nx">width</span><span class="p">,</span> <span class="mi">500</span> <span class="o">/</span> <span class="nx">height</span><span class="p">)</span>
+      <span class="kd">const</span> <span class="nx">cWidth</span> <span class="o">=</span> <span class="o">~~</span><span class="p">(</span><span class="nx">ratio</span> <span class="o">*</span> <span class="nx">width</span><span class="p">)</span>
+      <span class="kd">const</span> <span class="nx">cHeight</span> <span class="o">=</span> <span class="o">~~</span><span class="p">(</span><span class="nx">ratio</span> <span class="o">*</span> <span class="nx">height</span><span class="p">)</span>
+      <span class="kd">const</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">canvas</span><span class="dl">'</span><span class="p">)</span>
+      <span class="kd">const</span> <span class="nx">ctx</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="dl">'</span><span class="s1">2d</span><span class="dl">'</span><span class="p">)</span>
+      <span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nx">cWidth</span>
+      <span class="nx">canvas</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="nx">cHeight</span>
+      <span class="nx">ctx</span><span class="p">.</span><span class="nx">drawImage</span><span class="p">(</span><span class="nx">image</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">width</span><span class="p">,</span> <span class="nx">height</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">cWidth</span><span class="p">,</span> <span class="nx">cHeight</span><span class="p">)</span>
+      <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">ctx</span><span class="p">.</span><span class="nx">getImageData</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">cWidth</span><span class="p">,</span> <span class="nx">cHeight</span><span class="p">)</span>
+      <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">callback</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="nx">image</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">callback</span><span class="p">(</span><span class="dl">'</span><span class="s1">image load fail</span><span class="dl">'</span><span class="p">)</span>
+  <span class="p">}</span>
+  <span class="nx">image</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">url</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">jsQR</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">jsqr</span><span class="dl">'</span>
+<span class="k">import</span> <span class="nx">image2array</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">../../../utils/image2array</span><span class="dl">'</span>
+
+<span class="kd">function</span> <span class="nx">handleFileChange</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">files</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">files</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span>
+  <span class="kd">const</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileReader</span><span class="p">()</span>
+  <span class="kd">const</span> <span class="nx">file</span> <span class="o">=</span> <span class="nx">files</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+  <span class="c1">// 休眠等待 image2array 计算，数据流格式转化至 Uint8ClampedArray</span>
+  <span class="k">await</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="nx">res</span><span class="p">()</span> <span class="p">},</span> <span class="mi">100</span><span class="p">)</span> <span class="p">})</span>
+  <span class="kd">const</span> <span class="nx">imageUrl</span> <span class="o">=</span> <span class="nx">URL</span><span class="p">.</span><span class="nx">createObjectURL</span><span class="p">(</span><span class="nx">file</span><span class="p">)</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="nx">image2array</span><span class="p">(</span><span class="nx">imageUrl</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">info</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span> <span class="k">return</span>
+      <span class="kd">const</span> <span class="p">{</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">width</span><span class="p">,</span> <span class="nx">height</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">info</span>
+      <span class="kd">const</span> <span class="nx">binaryData</span> <span class="o">=</span> <span class="nx">jsQR</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">width</span><span class="p">,</span> <span class="nx">height</span><span class="p">)</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">binaryData</span> <span class="o">&amp;&amp;</span> <span class="nx">binaryData</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="nx">link</span> <span class="o">=</span> <span class="nx">binaryData</span><span class="p">.</span><span class="nx">data</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">link</span><span class="p">)</span>
+      <span class="p">}</span>
+    <span class="p">})</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="链接生成二维码">链接生成二维码</h2>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">QRCode</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">qrcode</span><span class="dl">'</span>
+
+<span class="kd">const</span> <span class="nx">link</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">https://vincheung.github.io</span><span class="dl">'</span>
+
+<span class="nx">QRCode</span><span class="p">.</span><span class="nx">toDataURL</span><span class="p">(</span><span class="nx">link</span><span class="p">,</span> <span class="p">{},</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">url</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">return</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET
