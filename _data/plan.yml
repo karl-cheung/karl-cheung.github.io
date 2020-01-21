@@ -66,12 +66,6 @@
   type: 1
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2523153760.jpg
 
-- name: 少年歌行
-  date:
-  type: 1
-  state: 0
-  link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2543731197.jpg
-
 - name: 东京喰种 3
   date: 2019-12-06
   type: 1
@@ -131,12 +125,6 @@
   type: 2
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2564369311.jpg
 
-- name: 银河补习班
-  date:
-  type: 2
-  state: 0
-  link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2561542089.jpg
-
 - name: 速度与激情：特别行动
   date:
   type: 2
@@ -181,11 +169,6 @@
   type: 2
   state: 0
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2570879785.jpg
-
-- name: 催眠·裁决
-  date: 2019-10-15
-  type: 2
-  link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2569044398.jpg
 
 - name: 天气之子
   date:
