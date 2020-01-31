@@ -94,9 +94,8 @@
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2545571306.jpg
 
 - name: 蜘蛛侠 英雄远征
-  date:
+  date: 2020-01-31
   type: 2
-  state: 0
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2558293106.jpg
 
 - name: 使徒行者 2 谍影行动
@@ -213,9 +212,8 @@
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2574278284.jpg
 
 - name: 这个勇者明明超强却过分慎重
-  date:
+  date: 2020-01-28
   type: 1
-  state: 1
   link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2570150836.jpg
 
 - name: 美丽人生
@@ -227,3 +225,8 @@
   date: 2019-12-22
   type: 2
   link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2575456458.jpg
+
+- name: 流感
+  date: 2020-01-29
+  type: 2
+  link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2029391129.jpg
