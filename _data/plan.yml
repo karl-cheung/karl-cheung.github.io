@@ -124,12 +124,6 @@
   type: 2
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2564369311.jpg
 
-- name: 速度与激情：特别行动
-  date:
-  type: 2
-  state: 0
-  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2561542272.jpg
-
 - name: あの頃、君を追いかけた
   date:
   type: 2
@@ -164,9 +158,8 @@
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2567998580.jpg
 
 - name: 犯罪现场
-  date:
+  date: 2020-02-01
   type: 2
-  state: 0
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2570879785.jpg
 
 - name: 天气之子
