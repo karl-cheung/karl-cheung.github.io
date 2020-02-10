@@ -1,0 +1,27 @@
+{% assign videos = site.data[include.param] | sort: 'state' %}
+<ul>
+  {% for video in videos reversed %}
+  <li>
+    <div class="pictrue">
+      {% if video.name %}
+      <img src={{ video.link }}>
+      {% else %}
+      <img src="javascript:;">
+      {% endif %}
+    </div>
+    <div class="name">{{ video.name }}&emsp;</div>
+    <div class="state">
+      {% if video.date %}
+      已追完
+      {% elsif video.state == 1 %}
+      进行中
+      {% elsif video.state == 2 %}
+      已追完
+      {% else %}
+      计划
+      {% endif %}
+    </div>
+    <div class="date">{{ video.date }}</div>
+  </li>
+  {% endfor %}
+</ul>

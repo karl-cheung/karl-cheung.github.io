@@ -3,46 +3,23 @@ layout: default
 ---
 
 <div class="plan">
-  <ul class="context">
-    {% assign videos = site.data.plan | sort: 'state' %}
-    {% for video in videos reversed %}
-    <li>
-      <div class="pictrue">
-        {% if video.name %}
-        <img src={{ video.link }}>
-        {% else %}
-        <img src="javascript:;">
-        {% endif %}
-      </div>
-      <div class="name-type">
-        <span class="name">
-          {{ video.name }}&emsp;
-        </span>
-        <span>
-          {% if video.type == 1 %}
-          动漫
-          {% elsif video.type == 2 %}
-          电影
-          {% elsif video.type == 3 %}
-          电视剧
-          {% else %}
-          动漫电影
-          {% endif %}
-        </span>
-      </div>
-      <div class="state">
-        {% if video.date %}
-        已追完
-        {% elsif video.state == 1 %}
-        进行中
-        {% elsif video.state == 2 %}
-        已追完
-        {% else %}
-        计划
-        {% endif %}
-      </div>
-      <div class="date">{{ video.date }}</div>
-    </li>
-    {% endfor %}
-  </ul>
+  <div>
+    <div class="title">动漫</div>
+    <div class="context">{%- include plan-list.html param="anime" -%}</div>
+  </div>
+
+  <div>
+    <div class="title">电视剧</div>
+    <div class="context">{%- include plan-list.html param="teleplay" -%}</div class="context">
+  </div>
+
+  <div>
+    <div class="title">电影</div>
+    <div class="context">{%- include plan-list.html param="movie" -%}</div class="context">
+  </div>
+
+  <div>
+    <div class="title">动漫电影</div>
+    <div class="context">{%- include plan-list.html param="anime-movie" -%}</div class="context">
+  </div>
 </div>

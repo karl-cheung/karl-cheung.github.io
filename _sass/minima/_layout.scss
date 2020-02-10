@@ -49,7 +49,7 @@
     }
   }
 
-  label[for='nav-trigger'] {
+  label[for="nav-trigger"] {
     width: 36px;
     height: 36px;
     z-index: 2;
@@ -72,7 +72,7 @@
     line-height: $base-line-height;
     @include relative-font-size(0.875);
     padding: 5px 10px;
-    font-family: 'EffectraMedium';
+    font-family: "EffectraMedium";
     user-select: none;
 
     // Gaps between nav items, but not on the last one
@@ -96,7 +96,7 @@
     border: none;
     background-color: inherit;
 
-    label[for='nav-trigger'] {
+    label[for="nav-trigger"] {
       display: none;
     }
 
@@ -390,12 +390,12 @@
       font-size: 40px;
       color: #2f1728;
       font-weight: bold;
-      font-family: 'Domaine Disp Black';
+      font-family: "Domaine Disp Black";
     }
     .main {
       height: 80px;
       padding: 15px 0 35px;
-      font-family: 'Johnston ITC Pro Medium';
+      font-family: "Johnston ITC Pro Medium";
     }
     .btn-wrap {
       font-size: 0;
@@ -428,7 +428,7 @@
         }
         .btn {
           display: inline-block;
-          font-family: 'MuseoSansRounded 900';
+          font-family: "MuseoSansRounded 900";
         }
       }
       a:nth-child(1) {
@@ -448,6 +448,14 @@
 }
 
 .plan {
+  .title {
+    padding: 10px 30px;
+    margin: 30px 0 15px;
+    border-radius: 4px;
+    background: $brand-color;
+    color: white;
+    @include relative-font-size(1.2);
+  }
   .context {
     li {
       display: flex;
@@ -462,11 +470,8 @@
         flex: 0 0 100px;
         padding: 0 30px;
       }
-      .name-type {
-        width: 200px;
-        .name {
-          font-weight: bold;
-        }
+      .name {
+        font-weight: bold;
       }
       .state {
         width: 70px;

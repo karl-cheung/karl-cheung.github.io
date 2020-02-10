@@ -1,0 +1,17 @@
+- name: 仙剑奇侠传
+  date:
+  type: 2
+  state: 0
+  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2561931895.jpg
+
+- name: 胜利即正义
+  date:
+  type: 2
+  state: 0
+  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1901775591.jpg
+
+- name: 三国
+  date:
+  type: 2
+  state: 1
+  link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2284330099.jpg
