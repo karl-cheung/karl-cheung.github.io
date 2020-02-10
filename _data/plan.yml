@@ -111,7 +111,7 @@
 - name: 秦时明月 6 沧海横流
   date:
   type: 1
-  state: 1
+  state: 0
   link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2554078838.jpg
 
 - name: 罗小黑战记
@@ -223,3 +223,51 @@
   date: 2020-01-29
   type: 2
   link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2029391129.jpg
+
+- name: 在地下城寻求邂逅是否搞错了什么
+  date:
+  type: 1
+  state: 0
+  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2236547661.jpg
+
+- name: 在地下城寻求邂逅是否搞错了什么 2
+  date:
+  type: 1
+  state: 0
+  link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2558922894.jpg
+
+- name: 镇魂街 2
+  date:
+  type: 1
+  state: 0
+  link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2574775186.jpg
+
+- name: 大王不高兴
+  date:
+  type: 1
+  state: 0
+  link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2563744716.jpg
+
+- name: 万国志
+  date:
+  type: 1
+  state: 0
+  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2543555882.jpg
+
+- name: 天官赐福
+  date:
+  type: 1
+  state: 0
+  link: https://img1.doubanio.com/view/subject/s/public/s2983669.jpg
+
+- name: Re：创世主们 Re:CREATORS
+  date:
+  type: 1
+  state: 0
+  link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2409052765.jpg
+
+- name: 三国
+  date:
+  type: 3
+  state: 1
+  link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2284330099.jpg
