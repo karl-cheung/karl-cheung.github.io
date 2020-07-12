@@ -32,9 +32,22 @@
   date:
   type: 4
   state: 0
-  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2570055890.jpg
+  link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2613803079.jpg
 
-- name: 大鱼海棠（第二刷）
+- name: 大鱼海棠
   date: 2020-02-12
   type: 4
   link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2361744534.jpg
+
+- name: 薇尔莉特·伊芙加登
+  date:
+  type: 4
+  state: 0
+  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2578719670.jpg
+
+- name: 姜子牙
+  date:
+  type: 4
+  state: 0
+  link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2581582456.jpg
+

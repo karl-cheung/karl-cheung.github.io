@@ -4,13 +4,13 @@ Welcome to my blog.
 
 ## 主页设计
 
-设计引用自 [Hiring Artists Website Design]。
+引用自 [Hiring Artists Website Design]。
 
 ## 关于作者 / About
 
 * GitHub： [@vincheung](https://github.com/vincheung)
 * Instagram： [@vin__cheung](https://www.instagram.com/vin__cheung)
-* Sina： [@卿乙呀](https://weibo.com/7113166331)
+* Sina： [@卿乙丶](https://weibo.com/7113166331)
 
 ## 版权声明
 

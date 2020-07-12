@@ -92,6 +92,28 @@ git push <origin>
 git ls-remote
 ```
 
+### tag
+
+```shell
+# 查看本地
+git tag
+
+# 查看远程
+git ls-remote --tags
+
+# 新建
+git tag <tag>
+
+# 推送远程
+git push origin <tag>
+
+# 删除本地
+git tag -d <tag>
+
+# 删除远程
+git push origin :refs/tags/<tag>
+```
+
 ### 推送 pr
 
 ```shell
