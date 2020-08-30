@@ -70,16 +70,15 @@
   state: 0
   link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2558922894.jpg
 
-- name: 镇魂街 2
+- name: 镇魂街 2 第 5 集
   date:
   type: 1
-  state: 0
+  state: 1
   link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2574775186.jpg
 
 - name: 大王不高兴
-  date:
+  date: 2020-08-30
   type: 1
-  state: 0
   link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2563744716.jpg
 
 - name: 万国志
@@ -100,8 +99,98 @@
   state: 0
   link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2409052765.jpg
 
-- name: Re：从零开始的异世界生活 第二季
+- name: Re：从零开始的异世界生活 第二季 第 8 集
+  date:
+  type: 1
+  state: 1
+  link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2608107566.jpg
+
+- name: 武庚纪 第三季 第 93 集
+  date:
+  type: 1
+  state: 1
+  link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2578380639.jpg
+
+- name: 历师
   date:
   type: 1
   state: 0
-  link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2608107566.jpg
+  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2601050892.jpg
+
+- name: 人力战舰！？汐风泽风
+  date:
+  type: 1
+  state: 0
+  link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2545338248.jpg
+
+- name: 警视厅 特务部 特殊凶恶犯对策室 第七课 -TOKUNANA-
+  date:
+  type: 1
+  state: 0
+  link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2569935138.jpg
+
+- name: ReLIFE
+  date:
+  type: 1
+  state: 0
+  link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2412723898.jpg
+
+- name: 梦塔·雪谜城
+  date:
+  type: 1
+  state: 0
+  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2524971252.jpg
+
+- name: 女神异闻录5
+  date:
+  type: 1
+  state: 0
+  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2535525231.jpg
+
+- name: 碧蓝幻想
+  date:
+  type: 1
+  state: 0
+  link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2408247827.jpg
+
+- name: 灵笼
+  date:
+  type: 1
+  state: 0
+  link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2562904016.jpg
+
+- name: 命运之夜
+  date:
+  type: 1
+  state: 0
+  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2260549012.jpg
+
+- name: 我的青春恋爱物语果然有问题
+  date:
+  type: 1
+  state: 0
+  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1930357540.jpg
+
+- name: 为我而生
+  date:
+  type: 1
+  state: 0
+  link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2532501955.jpg
+
+- name: 雾山五行
+  date:
+  type: 1
+  state: 0
+  link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2615404769.jpg
+
+- name: 画江湖之不良人2
+  date:
+  type: 1
+  state: 0
+  link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2356038726.jpg
+
+- name: 物语系列
+  date:
+  type: 1
+  state: 0
+  link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2158900536.jpg

@@ -9,19 +9,21 @@
       <img src="javascript:;">
       {% endif %}
     </div>
-    <div class="name">{{ video.name }}&emsp;</div>
-    <div class="state">
-      {% if video.date %}
-      已追完
-      {% elsif video.state == 1 %}
-      进行中
-      {% elsif video.state == 2 %}
-      已追完
-      {% else %}
-      计划
-      {% endif %}
+    <div class="ctx">
+      <div class="name">{{ video.name }}&emsp;</div>
+        <div class="state">
+          {% if video.date %}
+          已追完
+          {% elsif video.state == 1 %}
+          进行中
+          {% elsif video.state == 2 %}
+          已追完
+          {% else %}
+          计划
+          {% endif %}
+          <div class="date">{{ video.date }}</div>
+        </div>
     </div>
-    <div class="date">{{ video.date }}</div>
   </li>
   {% endfor %}
 </ul>

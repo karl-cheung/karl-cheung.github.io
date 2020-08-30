@@ -118,12 +118,11 @@
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1421556892.jpg
 
 - name: 建党伟业
-  date:
+  date: 2020-07-25
   type: 3
-  state: 0
   link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2394309725.jpg
 
-- name: 花木兰
+- name: 木兰：横空出世
   date:
   type: 3
   state: 0
@@ -152,3 +151,25 @@
   type: 3
   state: 0
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2588307420.jpg
+
+- name: 唐人街探案
+  date: 2019-08-10
+  type: 3
+  link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2302930556.jpg
+
+- name: 唐人街探案2
+  date: 2020-08-05
+  type: 3
+  link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2512717519.jpg
+
+- name: 唐人街探案3
+  date:
+  type: 3
+  state: 0
+  link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2575462219.jpg
+
+- name: 八佰
+  date:
+  type: 3
+  state: 0
+  link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2615992304.jpg
