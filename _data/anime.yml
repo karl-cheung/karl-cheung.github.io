@@ -99,22 +99,20 @@
   state: 0
   link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2409052765.jpg
 
-- name: Re：从零开始的异世界生活 第二季 第 8 集
+- name: Re：从零开始的异世界生活 第二季 第 13 集
   date:
   type: 1
   state: 1
   link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2608107566.jpg
 
-- name: 武庚纪 第三季 第 93 集
-  date:
+- name: 武庚纪 第三季
+  date: 2020-10-18
   type: 1
-  state: 1
   link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2578380639.jpg
 
 - name: 历师
-  date:
+  date: 2020-09-14
   type: 1
-  state: 0
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2601050892.jpg
 
 - name: 人力战舰！？汐风泽风
@@ -183,14 +181,38 @@
   state: 0
   link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2615404769.jpg
 
-- name: 画江湖之不良人2
-  date:
-  type: 1
-  state: 0
-  link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2356038726.jpg
-
 - name: 物语系列
   date:
   type: 1
   state: 0
   link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2158900536.jpg
+
+- name: 那年那兔那些事
+  date:
+  type: 1
+  state: 0
+  link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2372426067.jpg
+
+- name: 我女友与青梅竹马的惨烈修罗场
+  date:
+  type: 1
+  state: 0
+  link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p1922435926.jpg
+
+- name: 野良神
+  date:
+  type: 1
+  state: 0
+  link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2166913228.jpg
+
+- name: 终结的炽天使
+  date:
+  type: 1
+  state: 0
+  link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2229632882.jpg
+
+- name: 剧场版 K Seven Stories
+  date:
+  type: 1
+  state: 0
+  link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2589547879.jpg

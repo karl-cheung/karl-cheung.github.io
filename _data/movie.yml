@@ -169,7 +169,11 @@
   link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2575462219.jpg
 
 - name: 八佰
-  date:
+  date: 2020-09-05
   type: 3
-  state: 0
   link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2615992304.jpg
+
+- name: 花木兰
+  date: 2020-09-18
+  type: 3
+  link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2619121919.jpg

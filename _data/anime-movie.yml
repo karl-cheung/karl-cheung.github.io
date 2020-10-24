@@ -34,7 +34,7 @@
   state: 0
   link: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2613803079.jpg
 
-- name: 大鱼海棠(复)
+- name: 大鱼海棠(N)
   date: 2020-02-12
   type: 4
   link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2361744534.jpg
@@ -46,9 +46,8 @@
   link: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2578719670.jpg
 
 - name: 姜子牙
-  date:
+  date: 2020-10-11
   type: 4
-  state: 0
   link: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2581582456.jpg
 
 - name: 若能与你共乘海浪之上
