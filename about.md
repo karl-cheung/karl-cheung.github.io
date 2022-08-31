@@ -24,4 +24,4 @@ I have no plans to launch a comment system for my blog,
 
 If you have any questions, go to [GitHub-Issues].
 
-[github-issues]: https://github.com/vincheung/vincheung.github.io/issues
+[GitHub-Issues]: https://github.com/karl-cheung/karl-cheung.github.io/issues

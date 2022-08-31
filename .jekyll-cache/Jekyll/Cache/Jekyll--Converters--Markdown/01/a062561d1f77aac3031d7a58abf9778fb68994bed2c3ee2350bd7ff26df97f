@@ -1,4 +1,4 @@
-I"R<h2 id="nginx">nginx</h2>
+I"x<h2 id="nginx">nginx</h2>
 
 <h3 id="根目录">根目录</h3>
 
@@ -48,7 +48,7 @@
 </code></pre></div></div>
 
 <blockquote>
-  <p>如果应用服务在 <code class="highlighter-rouge">/app/</code> 下（非根目录）</p>
+  <p>如果应用服务在 <code class="language-plaintext highlighter-rouge">/app/</code> 下（非根目录）</p>
 </blockquote>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">VueRouter</span><span class="p">({</span>
@@ -62,7 +62,7 @@
 <p>React Router 默认开启 browserHistory</p>
 
 <blockquote>
-  <p>如果应用服务在 <code class="highlighter-rouge">/app/</code> 下（非根目录）</p>
+  <p>如果应用服务在 <code class="language-plaintext highlighter-rouge">/app/</code> 下（非根目录）</p>
 </blockquote>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">BrowserRouter</span> <span class="nx">basename</span><span class="o">=</span><span class="dl">'</span><span class="s1">/app</span><span class="dl">'</span><span class="o">&gt;&lt;</span><span class="sr">/BrowserRouter</span><span class="err">&gt;

@@ -1,5 +1,5 @@
 title: Zhang Yu
-author: vincheung
+author: karl-cheung
 email: zhangyu.karl@gmail.com
 description: > # this means to ignore newlines until "show_excerpts:"
   A practice trip for a front-end r&d engineer.
@@ -13,12 +13,7 @@ minima:
 
   # generate social links in footer
   social_links:
-    github: vincheung
-    instagram: vin__cheung
-    twitter: vin__cheung
-    facebook: zhangyu.vin
-    linkedin: vin-cheung
-    youtube_channel: UCFpTR0LvTggoejtFEKWKIWA
+    github: karl-cheung
     rss: rss
 
     # Mastodon instances

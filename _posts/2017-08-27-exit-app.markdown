@@ -3,5 +3,5 @@ layout: post
 title: "微信或支付宝点击返回键退出应用程序"
 date: 2017-08-27
 categories: jekyll update
-link: https://github.com/vincheung/exit-app
+link: https://github.com/karl-cheung/exit-app
 ---

@@ -13,7 +13,6 @@ categories: jekyll update
 
 ```js
 // image2array.js
-// 来自孩子王-许祥成
 export default function(url, callback) {
   const image = new Image(url)
   image.onload = function() {
@@ -73,7 +72,7 @@ function handleFileChange(e) {
 ```js
 import QRCode from 'qrcode'
 
-const link = 'https://vincheung.github.io'
+const link = 'https://karl-cheung.github.io'
 
 QRCode.toDataURL(link, {}, (err, url) => {
   if (err) return

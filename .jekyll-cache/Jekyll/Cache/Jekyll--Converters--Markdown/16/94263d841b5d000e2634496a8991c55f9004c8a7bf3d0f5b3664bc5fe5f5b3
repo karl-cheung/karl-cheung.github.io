@@ -1,4 +1,4 @@
-I"�<h2 id="使用">使用</h2>
+I"�<h2 id="使用">使用</h2>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span>
 <span class="k">import</span> <span class="nx">Hammer</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">hammerjs</span><span class="dl">'</span>
@@ -20,7 +20,7 @@
   <span class="p">}</span>
 
   <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
-    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">container</span><span class="p">}</span><span class="o">&gt;</span><span class="err">我是</span> <span class="nx">div</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">container</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">我是</span> <span class="nx">div</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
 </span>  <span class="p">}</span>
 <span class="p">}</span>
 

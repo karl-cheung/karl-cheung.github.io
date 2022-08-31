@@ -1,8 +1,9 @@
 {
-  "name": "vincheung.github.io",
+  "name": "karl-cheung.github.io",
   "version": "1.0.0",
   "description": "Zhang Yu - Blog",
   "scripts": {
+    "install": "bundle install",
     "serve": "jekyll serve",
     "build": "jekyll build"
   },
@@ -10,12 +11,12 @@
   "license": "Creative Commons BY-NC-ND 4.0（自由转载-保持署名-非商用-禁止演绎）协议",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vincheung/vincheung.github.io.git"
+    "url": "git+https://github.com/karl-cheung/karl-cheung.github.io.git"
   },
   "keywords": [
     "blog",
     "jekyll",
     "minima"
   ],
-  "homepage": "https://github.com/vincheung/vincheung.github.io#readme"
+  "homepage": "https://github.com/karl-cheung/karl-cheung.github.io#readme"
 }

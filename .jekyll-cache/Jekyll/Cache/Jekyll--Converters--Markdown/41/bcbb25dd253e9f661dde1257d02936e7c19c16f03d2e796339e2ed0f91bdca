@@ -1,10 +1,9 @@
-I"5,<h2 id="二维码识别链接">二维码识别链接</h2>
+I",<h2 id="二维码识别链接">二维码识别链接</h2>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">accept=</span><span class="s">"image/*"</span> <span class="na">onChange=</span><span class="s">"{handleFileChange}"</span> <span class="nt">/&gt;</span>
 </code></pre></div></div>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// image2array.js</span>
-<span class="c1">// 来自孩子王-许祥成</span>
 <span class="k">export</span> <span class="k">default</span> <span class="kd">function</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">const</span> <span class="nx">image</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Image</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span>
   <span class="nx">image</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
@@ -62,7 +61,7 @@
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">QRCode</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">qrcode</span><span class="dl">'</span>
 
-<span class="kd">const</span> <span class="nx">link</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">https://vincheung.github.io</span><span class="dl">'</span>
+<span class="kd">const</span> <span class="nx">link</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">https://karl-cheung.github.io</span><span class="dl">'</span>
 
 <span class="nx">QRCode</span><span class="p">.</span><span class="nx">toDataURL</span><span class="p">(</span><span class="nx">link</span><span class="p">,</span> <span class="p">{},</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">url</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">return</span>

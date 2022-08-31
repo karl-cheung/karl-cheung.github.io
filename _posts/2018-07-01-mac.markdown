@@ -3,5 +3,5 @@ layout: post
 title: "一份前端开发工程的装机清单 - Mac"
 date: 2018-07-01
 categories: jekyll update
-link: https://github.com/vincheung/mac
+link: https://github.com/karl-cheung/mac
 ---

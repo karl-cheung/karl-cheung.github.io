@@ -8,9 +8,7 @@ Welcome to my blog.
 
 ## 关于作者 / About
 
-* GitHub： [@vincheung](https://github.com/vincheung)
-* Instagram： [@vin__cheung](https://www.instagram.com/vin__cheung)
-* Sina： [@卿乙丶](https://weibo.com/7113166331)
+* GitHub： [@karl-cheung](https://github.com/karl-cheung)
 
 ## 版权声明
 

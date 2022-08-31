@@ -3,5 +3,5 @@ layout: post
 title: "微信小程序 WeUI 的轻量级补充，及其他功能组件（Authorize）"
 date: 2017-10-29
 categories: jekyll update
-link: https://github.com/vincheung/wxu
+link: https://github.com/karl-cheung/wxu
 ---
