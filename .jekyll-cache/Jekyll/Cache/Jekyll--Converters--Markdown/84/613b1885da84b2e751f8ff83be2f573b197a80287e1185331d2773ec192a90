@@ -1,0 +1,29 @@
+I"<h2 id="变更">变更</h2>
+
+<blockquote>
+  <p>命令行运行</p>
+</blockquote>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git filter-branch <span class="nt">--env-filter</span> <span class="s1">'
+
+OLD_EMAIL="old_email@example.com"
+CORRECT_NAME="correct_name"
+CORRECT_EMAIL="correct_email@example.com"
+
+if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]
+then
+    export GIT_COMMITTER_NAME="$CORRECT_NAME"
+    export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"
+fi
+if [ "$GIT_AUTHOR_EMAIL" = "$OLD_EMAIL" ]
+then
+    export GIT_AUTHOR_NAME="$CORRECT_NAME"
+    export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
+fi
+'</span> <span class="nt">--tag-name-filter</span> <span class="nb">cat</span> <span class="nt">--</span> <span class="nt">--branches</span> <span class="nt">--tags</span>
+</code></pre></div></div>
+
+<h2 id="提交">提交</h2>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push <span class="nt">--force</span>
+</code></pre></div></div>
+:ET
