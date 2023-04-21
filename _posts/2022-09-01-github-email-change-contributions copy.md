@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'GitHub email 变更同步 contributions'
-date: 2020-09-01
+date: 2022-09-01
 categories: jekyll update
 ---
 

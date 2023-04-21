@@ -1,0 +1,40 @@
+I"^<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 防抖函数</span>
+<span class="kd">function</span> <span class="nx">debounce</span><span class="p">(</span><span class="nx">fun</span><span class="p">,</span> <span class="nx">delay</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="kd">function</span> <span class="p">(...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">fun</span><span class="p">.</span><span class="nx">timer</span><span class="p">)</span>
+    <span class="nx">fun</span><span class="p">.</span><span class="nx">timer</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">fun</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">args</span><span class="p">)</span>
+    <span class="p">},</span> <span class="nx">delay</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// 节流函数</span>
+<span class="kd">function</span> <span class="nx">throttle</span><span class="p">(</span><span class="nx">fun</span><span class="p">,</span> <span class="nx">delay</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="kd">function</span> <span class="p">(...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">fun</span><span class="p">.</span><span class="nx">timer</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+    <span class="nx">fun</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">args</span><span class="p">)</span>
+    <span class="nx">fun</span><span class="p">.</span><span class="nx">timer</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">fun</span><span class="p">.</span><span class="nx">timer</span> <span class="o">=</span> <span class="kc">null</span>
+    <span class="p">},</span> <span class="nx">delay</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// 验证</span>
+<span class="kd">function</span> <span class="nx">test</span><span class="p">(</span><span class="nx">fn</span><span class="p">,</span> <span class="nx">delay</span><span class="p">,</span> <span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">random</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">delay</span><span class="p">)</span>
+    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">random</span><span class="p">)</span>
+      <span class="nx">fn</span><span class="p">(</span><span class="nx">random</span><span class="p">)</span>
+    <span class="p">},</span> <span class="nx">random</span><span class="p">)</span>
+    <span class="nx">num</span><span class="o">--</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">DELAY</span> <span class="o">=</span> <span class="mi">1000</span> <span class="c1">// 时间阈值</span>
+<span class="kd">const</span> <span class="nx">NUM</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1">// 验证次数</span>
+
+<span class="nx">test</span><span class="p">(</span><span class="nx">debounce</span><span class="p">((</span><span class="nx">last</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">只有最后一次实际执行</span><span class="dl">'</span><span class="p">,</span> <span class="nx">last</span><span class="p">),</span> <span class="nx">DELAY</span><span class="p">),</span> <span class="nx">DELAY</span><span class="p">,</span> <span class="nx">NUM</span><span class="p">)</span>
+<span class="c1">// test(throttle((first) =&gt; console.log('只有第一次实际执行', first), DELAY), DELAY, NUM)</span>
+</code></pre></div></div>
+:ET

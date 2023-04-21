@@ -1,0 +1,11 @@
+I"�<p>```js
+// 防抖函数
+function debounce(fun, delay) {
+  return function (…args) {
+    clearTimeout(fun.timer)
+    fun.timer = setTimeout(() =&gt; {
+      fun.apply(this, args)
+    }, delay)
+  }
+}</p>
+:ET
