@@ -1,4 +1,4 @@
-I"�<h2 id="配置">配置</h2>
+I"�<h2 id="配置">配置</h2>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 git config <span class="nt">--global</span> user.name <span class="s1">'name'</span>
@@ -43,7 +43,7 @@ git add <span class="nb">.</span>
 
 git commit <span class="nt">-m</span> <span class="s1">'commit message'</span>
 
-git push origin master
+git push origin &lt;branch&gt;
 
 <span class="c"># 保留当前代码删除所有提交历史</span>
 
@@ -61,7 +61,7 @@ git push <span class="nt">-f</span> origin master
 
 <span class="c"># 强制提交</span>
 
-git push origin &lt;Branch&gt; <span class="nt">--force</span>
+git push origin &lt;branch&gt; <span class="nt">--force</span>
 </code></pre></div></div>
 
 <h2 id="remote">remote</h2>
@@ -75,11 +75,34 @@ git remote add &lt;origin&gt; <span class="k">*</span>.git
 <span class="c"># 删除 remote</span>
 git remote remove &lt;origin&gt;
 
+<span class="c"># 重命名 remote</span>
+git remote rename &lt;old-origin&gt; &lt;new-origin&gt;
+
 <span class="c"># 指定 remote 提交</span>
 git push &lt;origin&gt;
 
 <span class="c"># 查看其他 remote 提交日志</span>
 git ls-remote
+
+<span class="c"># 更改远程仓库（新的 remote）</span>
+git remote set-url origin <span class="k">*</span>@<span class="k">*</span>.git
+
+<span class="c"># 推送更改后的远程仓库并设置为默认跟踪分支</span>
+git push <span class="nt">-u</span> origin master
+
+<span class="c"># 推送并设置跟踪分支</span>
+git push <span class="nt">-u</span> origin &lt;branch&gt;
+</code></pre></div></div>
+
+<h2 id="更换远程仓库">更换远程仓库</h2>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 更改远程仓库地址</span>
+git remote set-url origin &lt;new-url&gt;
+
+<span class="c"># 获取远程仓库的所有分支</span>
+git fetch origin
+
+<span class="c"># 遍历所有本地分支并设置它们以跟踪相应的远程分支</span>
+git branch <span class="nt">-r</span> | <span class="nb">grep</span> <span class="nt">-v</span> <span class="s1">'\-&gt;'</span> | <span class="k">while </span><span class="nb">read </span>remote<span class="p">;</span> <span class="k">do </span>git branch <span class="nt">--track</span> <span class="s2">"</span><span class="k">${</span><span class="nv">remote</span><span class="p">#origin/</span><span class="k">}</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$remote</span><span class="s2">"</span><span class="p">;</span> <span class="k">done</span>
 </code></pre></div></div>
 
 <h3 id="tag">tag</h3>
@@ -111,14 +134,20 @@ git remote <span class="nt">-v</span>
 
 git fetch upstream
 
-git merge upstream/master
+git merge upstream/&lt;branch&gt;
 
-git push origin master
+git push origin &lt;branch&gt;
 </code></pre></div></div>
 
 <h2 id="其他">其他</h2>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c"># 丢弃本地全部变更</span>
+git reset <span class="nt">--hard</span> HEAD^
+
+<span class="c"># 丢弃本地全部变更并与远程分支保持同步</span>
+git reset <span class="nt">--hard</span> origin/&lt;branch&gt;
+
 <span class="c"># 取消工作区更改</span>
 git checkout file
 
@@ -126,7 +155,7 @@ git checkout file
 git reset HEAD file
 
 <span class="c"># 查看上一次未 push 的 commit</span>
-git log master ^origin/master
+git log &lt;branch&gt; ^origin/&lt;branch&gt;
 
 <span class="c"># 撤销上一次未 push 的 commit</span>
 git reset HEAD~1
@@ -138,15 +167,27 @@ git reset commit_id
 git commit <span class="nt">--amend</span> <span class="nt">-m</span> <span class="s1">'commit message'</span>
 
 <span class="c"># 拉取远程分支并新建本地分支</span>
-git fetch &lt;Branch&gt;:&lt;Branch&gt;
+git fetch &lt;branch&gt;:&lt;branch&gt;
 
 <span class="c"># 拉取远程分支并在本地新建后转变到本地分支</span>
-git checkout <span class="nt">-b</span> &lt;Branch&gt; origin/&lt;Branch&gt;
+git checkout <span class="nt">-b</span> &lt;branch&gt; origin/&lt;branch&gt;
 
 <span class="c"># 删除远程分支文件</span>
 git <span class="nb">rm</span> <span class="nt">-rf</span> file
 
 <span class="c"># 删除远程分支文件但本地继续保存</span>
 git <span class="nb">rm</span> <span class="nt">--cached</span> file
+
+<span class="c"># 本地分支关联到远程分支</span>
+git branch <span class="nt">--set-upstream-to</span><span class="o">=</span>origin/&lt;branch&gt; &lt;branch&gt;
+
+<span class="c"># 重命名本地分支</span>
+git branch <span class="nt">-m</span> &lt;oldDranch&gt; &lt;newBranch&gt;
+
+<span class="c"># 删除远程分支</span>
+git push origin <span class="nt">-d</span> &lt;branch&gt;
+
+<span class="c"># 多个分支推送</span>
+git push <span class="nt">--all</span> origin
 </code></pre></div></div>
 :ET
