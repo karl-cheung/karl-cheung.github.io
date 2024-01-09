@@ -1,4 +1,4 @@
-I"�<h2 id="配置">配置</h2>
+I"I<h2 id="配置">配置</h2>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 git config <span class="nt">--global</span> user.name <span class="s1">'name'</span>
@@ -142,11 +142,17 @@ git push origin &lt;branch&gt;
 <h2 id="其他">其他</h2>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="c"># 丢弃本地全部变更</span>
+<span class="c"># 保留工作目录中更改回退到上一个提交（HEAD^）</span>
+git reset HEAD^
+
+<span class="c"># 丢弃工作目录中更改回退到上一个提交（HEAD^）</span>
 git reset <span class="nt">--hard</span> HEAD^
 
-<span class="c"># 丢弃本地全部变更并与远程分支保持同步</span>
+<span class="c"># 丢弃工作目录中更改并将工作目录恢复到指定远程分支的最新状态</span>
 git reset <span class="nt">--hard</span> origin/&lt;branch&gt;
+
+<span class="c"># 不变更 commit 历史对某次 commit_id 进行更改</span>
+git revert commit_id
 
 <span class="c"># 取消工作区更改</span>
 git checkout file
@@ -169,7 +175,10 @@ git commit <span class="nt">--amend</span> <span class="nt">-m</span> <span clas
 <span class="c"># 拉取远程分支并新建本地分支</span>
 git fetch &lt;branch&gt;:&lt;branch&gt;
 
-<span class="c"># 拉取远程分支并在本地新建后转变到本地分支</span>
+<span class="c"># 创建本地分支并切换</span>
+git checkout <span class="nt">-b</span> &lt;branch&gt;
+
+<span class="c"># 拉取远程分支并在本地新建后切换到本地分支</span>
 git checkout <span class="nt">-b</span> &lt;branch&gt; origin/&lt;branch&gt;
 
 <span class="c"># 删除远程分支文件</span>

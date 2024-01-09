@@ -156,11 +156,17 @@ git push origin <branch>
 
 ```shell
 
-# 丢弃本地全部变更
+# 保留工作目录中更改回退到上一个提交（HEAD^）
+git reset HEAD^
+
+# 丢弃工作目录中更改回退到上一个提交（HEAD^）
 git reset --hard HEAD^
 
-# 丢弃本地全部变更并与远程分支保持同步
+# 丢弃工作目录中更改并将工作目录恢复到指定远程分支的最新状态
 git reset --hard origin/<branch>
+
+# 不变更 commit 历史对某次 commit_id 进行更改
+git revert commit_id
 
 # 取消工作区更改
 git checkout file
@@ -183,7 +189,10 @@ git commit --amend -m 'commit message'
 # 拉取远程分支并新建本地分支
 git fetch <branch>:<branch>
 
-# 拉取远程分支并在本地新建后转变到本地分支
+# 创建本地分支并切换
+git checkout -b <branch>
+
+# 拉取远程分支并在本地新建后切换到本地分支
 git checkout -b <branch> origin/<branch>
 
 # 删除远程分支文件
